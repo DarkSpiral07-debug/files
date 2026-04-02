@@ -1,0 +1,187 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0e1a12;
+}
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 1.5rem;
+  background: rgba(14, 26, 18, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerInner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #e8f5e0;
+  letter-spacing: -0.4px;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #4a6a40;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2px;
+}
+
+.ghLink {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #8aab7a;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  transition: color 0.2s, background 0.2s;
+}
+
+.ghLink:hover {
+  color: #f4d03f;
+  background: rgba(244, 208, 63, 0.06);
+  border-color: rgba(244, 208, 63, 0.2);
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 13.5px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  color: #8aab7a;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  color: #e8f5e0;
+  background: rgba(255,255,255,0.08);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btnPrimary {
+  background: #f4d03f;
+  border-color: #f4d03f;
+  color: #1a1000;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: #f9e07a;
+  border-color: #f9e07a;
+  color: #1a1000;
+}
+
+.speedWrap {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speedLabel {
+  font-size: 12px;
+  color: #4a6a40;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.speedSlider {
+  width: 80px;
+}
+
+.speedVal {
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #8aab7a;
+  min-width: 28px;
+}
+
+/* ── Panels ── */
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoWrap {
+  margin-top: 4px;
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 11.5px;
+  color: #4a6a40;
+  font-family: 'JetBrains Mono', monospace;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

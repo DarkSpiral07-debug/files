@@ -1,0 +1,62 @@
+.card {
+  background: #162210;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.cardTitle {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a6a40;
+  margin-bottom: 14px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #8aab7a;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e8f5e0;
+  background: rgba(255,255,255,0.06);
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.val.changed {
+  background: rgba(244, 208, 63, 0.15);
+  color: #f4d03f;
+  border-color: rgba(244, 208, 63, 0.35);
+}
+
+.note {
+  font-size: 10.5px;
+  color: #4a6a40;
+  margin-top: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 10px;
+}
